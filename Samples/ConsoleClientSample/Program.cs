@@ -15,12 +15,8 @@ namespace ConsoleClientSample
             try
             {
                 var token = GetClientToken();
-                if (token.IsError || token.IsHttpError)
-                {
-                    Console.WriteLine("Failed to get token from identity server. Err:{0}", token.Error);
-                    return;
-                }
-                Console.WriteLine("Token get from identity server. /n Token={0}", token.AccessToken);
+                CallApi(token);
+                token = GetUserToken();
                 CallApi(token);
             }
             catch (Exception err)

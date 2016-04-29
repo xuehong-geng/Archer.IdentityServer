@@ -23,6 +23,7 @@ namespace WebApiSample.Controllers
                 {
                     message = "OK user",
                     client = caller.FindFirst("client_id").Value,
+                    user = caller.Identity.Name,
                     subject = subjectClaim.Value
                 });
             }
@@ -31,7 +32,8 @@ namespace WebApiSample.Controllers
                 return Json(new
                 {
                     message = "OK computer",
-                    client = caller.FindFirst("client_id").Value
+                    client = caller.FindFirst("client_id").Value,
+                    user = caller.Identity.Name
                 });
             }
         }
