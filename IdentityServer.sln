@@ -59,6 +59,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.AuthNHandler", "Iden
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebApi.ScopeAuthorization", "IdentityModel\WebApi.ScopeAuthorization\WebApi.ScopeAuthorization.csproj", "{1AD7A066-A6B9-4903-B049-32462609D05C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Core.EntityFramework", "Core.EntityFramework\Core.EntityFramework.csproj", "{D4C0430D-3B41-422A-B1A6-BA6C68400FF1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcSample", "Samples\MvcSample\MvcSample.csproj", "{DB5AC97F-CE04-4D79-AA09-27EB1A3FCAC9}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		IdentityModel\Client.Shared\Client.Shared.projitems*{917eb5f1-d71f-4e4f-97a6-c68704478b01}*SharedItemsImports = 13
@@ -220,6 +224,18 @@ Global
 		{1AD7A066-A6B9-4903-B049-32462609D05C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1AD7A066-A6B9-4903-B049-32462609D05C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1AD7A066-A6B9-4903-B049-32462609D05C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D4C0430D-3B41-422A-B1A6-BA6C68400FF1}.AzureWebSites|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C0430D-3B41-422A-B1A6-BA6C68400FF1}.AzureWebSites|Any CPU.Build.0 = Release|Any CPU
+		{D4C0430D-3B41-422A-B1A6-BA6C68400FF1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D4C0430D-3B41-422A-B1A6-BA6C68400FF1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D4C0430D-3B41-422A-B1A6-BA6C68400FF1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D4C0430D-3B41-422A-B1A6-BA6C68400FF1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB5AC97F-CE04-4D79-AA09-27EB1A3FCAC9}.AzureWebSites|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5AC97F-CE04-4D79-AA09-27EB1A3FCAC9}.AzureWebSites|Any CPU.Build.0 = Release|Any CPU
+		{DB5AC97F-CE04-4D79-AA09-27EB1A3FCAC9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB5AC97F-CE04-4D79-AA09-27EB1A3FCAC9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB5AC97F-CE04-4D79-AA09-27EB1A3FCAC9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB5AC97F-CE04-4D79-AA09-27EB1A3FCAC9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -248,5 +264,6 @@ Global
 		{986B606C-7163-4621-A8BD-F4705DCC8A90} = {C302C5B6-90F4-48AA-A2A3-023E96ACE59A}
 		{4FBEE49E-C5CB-4CAE-A770-E6B2459AAB86} = {C302C5B6-90F4-48AA-A2A3-023E96ACE59A}
 		{1AD7A066-A6B9-4903-B049-32462609D05C} = {C302C5B6-90F4-48AA-A2A3-023E96ACE59A}
+		{DB5AC97F-CE04-4D79-AA09-27EB1A3FCAC9} = {F8158B11-8616-441F-BD8D-C7AF76B7F608}
 	EndGlobalSection
 EndGlobal

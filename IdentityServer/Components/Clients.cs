@@ -53,6 +53,22 @@ namespace IdentityServer.Components
                     {
                         "api1"
                     }
+                },
+
+                // mvc client
+                new Client
+                {
+                    Enabled = true,
+                    ClientName = "MVC Client",
+                    ClientId = "mvc",
+                    Flow = Flows.Implicit,
+
+                    RedirectUris = new List<string>
+                    {
+                        "http://localhost:51173/"
+                    },
+
+                    AllowAccessToAllScopes = true
                 }
             };
         }

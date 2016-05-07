@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Owin.Hosting;
 using Owin;
 using System.Web.Http;
 using IdentityServer.Components;
+using IdentityServer.Configuration;
 using IdentityServer3.Core.Configuration;
 using IdentityServer3.Core.Services.InMemory;
 
@@ -83,13 +85,24 @@ namespace IdentityServer
             // Configure identity server
             var options = new IdentityServerOptions
             {
+                SiteName = "Archer Identity Server",
+                SigningCertificate = LoadCertificate(),
+
                 Factory = new IdentityServerServiceFactory()
                     .UseInMemoryClients(Clients.Get())
-                    .UseInMemoryScopes(Scopes.Get())
+                    .UseInMemoryScopes(IdentityServer3.Core.Models.StandardScopes.All)
                     .UseInMemoryUsers(Users.Get()),
                 RequireSsl = false
             };
             appBuilder.UseIdentityServer(options);
+        }
+
+        X509Certificate2 LoadCertificate()
+        {
+            //return new X509Certificate2(
+            //    string.Format(@"{0}\bin\identityServer\idsrv3test.pfx", AppDomain.CurrentDomain.BaseDirectory), "idsrv3test");
+            var cfg = IdentityServerConfigSection.Default.SigninCertificate;
+            return cfg.GetCertificate();
         }
     }
 }

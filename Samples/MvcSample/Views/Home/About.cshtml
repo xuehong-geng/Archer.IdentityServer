@@ -1,0 +1,20 @@
+﻿@using System.Security.Claims
+@{
+    ViewBag.Title = "About";
+    var claims = (User as ClaimsPrincipal)?.Claims;
+}
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
+
+<p>Use this area to provide additional information.</p>
+
+@if (claims != null)
+{
+    <dl>
+        @foreach (var claim in claims)
+        {
+            <dt>@claim.Type</dt>
+            <dd>@claim.Value</dd>
+        }
+    </dl>
+}

@@ -86,6 +86,8 @@
     <Compile Include="Components\Clients.cs" />
     <Compile Include="Components\Scopes.cs" />
     <Compile Include="Components\Users.cs" />
+    <Compile Include="Configuration\CertificateConfigElement.cs" />
+    <Compile Include="Configuration\IdentityServerConfigSection.cs" />
     <Compile Include="IdentityServer.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="ProjectInstaller.cs">
