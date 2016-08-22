@@ -98,9 +98,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Core\Core.csproj">
+    <ProjectReference Include="..\Core\IdentModel.csproj">
       <Project>{7fad936f-3f5c-4d31-b733-0b76ae4d1034}</Project>
-      <Name>Core</Name>
+      <Name>IdentModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
